@@ -59,7 +59,7 @@ void calculaIMC()
     altura /= 100;
     IMC = peso / (altura * altura);
 
-    Console.WriteLine("\nO IMC de {0} é: " + IMC.ToString("F"), nome);
+    Console.WriteLine($"\nO IMC de {nome} é: " + IMC.ToString("F"));
 
     Console.WriteLine("Classificação: " + classificaIMC(IMC));
 }
