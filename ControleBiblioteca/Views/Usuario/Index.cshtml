@@ -1,0 +1,32 @@
+﻿@model List<UsuarioModel>
+
+<br />
+<br />
+<h3>Lista de Usuarios</h3>
+
+<br />
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Login</th>
+      <th scope="col">Senha</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+
+        @foreach(var user in Model)
+        {
+            <tr>
+                <td>@user.Nome</td>
+                <td>@user.Login</td>
+                <td>@user.Senha</td>
+                <td><button type="button" class="btn btn-warning btn-sm" onclick="edita(@user.Id)"><i class="fa fa-edit"></i></button>&nbsp;<button type="button" class="btn btn-danger btn-sm"  onclick="exclui(@user.Id)"><i class="fa fa-window-close"></i></button></td>
+            </tr>
+        }
+        
+    
+  </tbody>
+</table>
+<div align="right"><a asp-controller="Usuario" asp-action="Cadastro" type="button" class="btn btn-success btn-sm"><i class="fa fa-user-plus" style="margin-right: 10px;"></i>Adicionar Usuário</a>

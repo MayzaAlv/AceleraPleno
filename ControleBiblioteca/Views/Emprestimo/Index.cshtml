@@ -1,0 +1,30 @@
+﻿@model List<EmprestimoModel>
+
+<br />
+<br />
+<h3>Lista de Usuarios</h3>
+
+<br />
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Autor</th>
+            <th scope="col">Usuário</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var emprestimo in Model)
+        {
+            <tr>
+                <td>@emprestimo.Livro</td>
+                <td>@emprestimo.Usuario</td>
+                <td><button type="button" class="btn btn-warning btn-sm" onclick="edita(@emprestimo.Id)"><i class="fa fa-edit"></i></button>&nbsp;<button type="button" class="btn btn-danger btn-sm" onclick="exclui(@emprestimo.Id)"><i class="fa fa-window-close"></i></button></td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+<div align="right"><a asp-controller="Usuario" asp-action="Cadastro" type="button" class="btn btn-success btn-sm"><i class="fa fa-user-plus" style="margin-right: 10px;"></i>Adicionar Usuário</a>

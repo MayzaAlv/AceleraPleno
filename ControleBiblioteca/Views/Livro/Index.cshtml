@@ -1,0 +1,30 @@
+﻿@model List<LivroModel>
+
+<br />
+<br />
+<h3>Lista de Livros</h3>
+
+<br />
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Autor</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var livro in Model)
+        {
+            <tr>
+                <td>@livro.Nome</td>
+                <td>@livro.Autor</td>
+                <td><button type="button" class="btn btn-warning btn-sm" onclick="edita(@livro.Id)"><i class="fa fa-edit"></i></button>&nbsp;<button type="button" class="btn btn-danger btn-sm" onclick="exclui(@livro.Id)"><i class="fa fa-window-close"></i></button></td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+<div align="right"><a asp-controller="Usuario" asp-action="Cadastro" type="button" class="btn btn-success btn-sm"><i class="fa fa-user-plus" style="margin-right: 10px;"></i>Adicionar Livro</a>
