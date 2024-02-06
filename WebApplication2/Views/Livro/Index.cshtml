@@ -1,0 +1,32 @@
+﻿@model List<LivroModel>
+
+<h1>Lista de Livros</h1>
+
+<table class="table table-dark table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Livro</th>
+      <th scope="col">Paginas</th>
+      <th scope="col">Código</th>
+      <th scope="col">Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+
+        @foreach(var li in Model)
+        {
+                <tr>
+          <th scope="row">@li.LIVRO</th>
+          <th scope="row">@li.PG</th>
+          <th scope="row">@li.COD</th>
+          <th scope="row">@li.VALOR</th>
+        </tr>
+        }
+
+    
+  </tbody>
+
+</table>
+
+
+<div align="right"><a asp-controller="Livro" asp-action="Cadastra" type="button" class="btn btn-success">Cadastrar</a></div>

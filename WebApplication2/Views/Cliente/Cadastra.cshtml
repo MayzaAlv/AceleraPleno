@@ -1,0 +1,17 @@
+﻿@model UsuarioModel
+
+<h1>Cadastro de usuario</h1>
+
+<form method="post" asp-controller="Cliente" asp-action="Index">
+
+    <div class="mb-3">
+        <label for="Nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="Nome" asp-for="Nome">
+        <label for="Login" class="form-label">Login</label>
+        <input type="text" class="form-control" id="Login" asp-for="Login">
+        <label for="exampleFormControlInput1" class="form-label">Senha</label>
+        <input type="password" class="form-control" id="Senha" asp-for="Senha">
+    </div>
+    <div align="right"><button type="submit" class="btn btn-success">Salvar</button></div>
+
+</form>

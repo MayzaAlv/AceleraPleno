@@ -1,0 +1,19 @@
+﻿@model LivroModel
+
+<h1>Cadastro de usuario</h1>
+
+<form method="post" asp-controller="Livro" asp-action="Index">
+
+    <div class="mb-3">
+        <label for="COD" class="form-label">COD</label>
+        <input type="text" class="form-control" id="COD" asp-for="COD">
+        <label for="LIVRO" class="form-label">Livro</label>
+        <input type="text" class="form-control" id="LIVRO" asp-for="LIVRO">
+        <label for="PG" class="form-label">PG</label>
+        <input type="number" class="form-control" id="PG" asp-for="PG">
+        <label for="VALOR" class="form-label">Valor</label>
+        <input type="number" class="form-control" id="VALOR" asp-for="VALOR">
+    </div>
+    <div align="right"><button type="submit" class="btn btn-success">Salvar</button></div>
+
+</form>

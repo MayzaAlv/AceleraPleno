@@ -1,0 +1,27 @@
+﻿@model List<UsuarioModel>
+<h1>Lista de clientes</h1>
+
+<table class="table table-dark table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Login</th>
+    </tr>
+  </thead>
+  <tbody>
+
+        @foreach(var us in Model)
+        {
+                <tr>
+          <th scope="row">@us.Nome</th>
+          <td>@us.Login</td>
+        </tr>
+        }
+
+    
+  </tbody>
+
+</table>
+
+
+  <div align="right"><a asp-controller="Cliente" asp-action="Cadastra" type="button" class="btn btn-success">Cadastrar</a></div>
