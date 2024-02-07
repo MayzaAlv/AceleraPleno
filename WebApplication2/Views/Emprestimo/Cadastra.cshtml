@@ -1,0 +1,22 @@
+﻿@model EmprestimoModel
+
+<h1>Cadastro de Emprestimo</h1>
+
+<form method="post" asp-controller="Emprestimo" asp-action="Index">
+
+    <div class="mb-3">
+        <label for="ID" class="form-label">ID</label>
+        <input type="text" class="form-control" id="ID" asp-for="ID">
+        <label for="IDUSUARIO" class="form-label">Usuario</label>
+        <input type="text" class="form-control" id="IDUSUARIO" asp-for="IDUSUARIO">
+        <label for="IDLIVRO" class="form-label">Livro</label>
+        <input type="text" class="form-control" id="IDLIVRO" asp-for="IDLIVRO">
+        <label for="DT_EMPRESTIMO" class="form-label">Data de Emprestimo</label>
+        <input type="datetime" class="form-control" id="DT_EMPRESTIMO" asp-for="DT_EMPRESTIMO">
+        <label for="DTDEVOLUCAO" class="form-label">Data de Devolução</label>
+        <input type="datetime" class="form-control" id="DTDEVOLUCAO" asp-for="DTDEVOLUCAO">
+    </div>
+    </div>
+    <div align="right"><button type="submit" class="btn btn-success">Salvar</button></div>
+
+</form>
